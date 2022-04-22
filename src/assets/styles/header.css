@@ -1,0 +1,50 @@
+#box { 
+    width: 300px;
+    height: 238px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+#hover {
+    position: absolute;
+    background-color: rgba(31, 31, 31, 0.733);
+    top: 0;
+    width: 0;
+    height: 100%;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    overflow: hidden;
+    transition: 0.3s all;
+}
+
+.hover-a, .fa-image{
+    color: aliceblue;
+    font-size: 1.15rem;
+    text-shadow: 1px 1px 1px #000000;
+    text-decoration: none;
+}
+
+#avatar-img {
+    width: 40px;
+    height: 40px;
+    clip-path: circle(50% at center);
+    object-fit: cover;
+}
+
+#image-btn {
+    object-fit: cover;
+}
+
+#box:hover #image-btn{
+    filter: blur(10px);
+}
+
+#box:hover #hover{
+    cursor: pointer;
+    width: 100%;
+}

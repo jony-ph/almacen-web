@@ -1,0 +1,48 @@
+.sidebar {
+	position: fixed;
+	top: 66px;
+  	width: 260px;
+	bottom: 0;
+	overflow: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+	width: 4px;
+	background: #0d6efd;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+	background: #083b88;
+	border-radius: 10px;
+}
+
+.carousel-img{
+	height: 40vh;
+	object-fit: cover;
+	filter: grayscale(100);
+}
+
+.carousel-title{
+	position: absolute;
+}
+
+#main {
+	margin-left: 260px;
+} 
+  
+@media screen and (max-width: 600px) {
+    .sidebar {
+      width: 100%;
+      position: relative;
+	  top: 56px;
+    } 
+
+    #main {
+      margin-left: 0px;
+    }
+
+
+	
+}
+  
+ 

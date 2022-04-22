@@ -1,0 +1,15 @@
+#drop-area.active {
+    background-color: #ececec;
+}
+
+#container-user-form {
+    width: 35%;
+}
+
+#table-users {
+}
+
+.container-users-table{
+    height: 50vh;
+    overflow-y: auto;
+}
