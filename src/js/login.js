@@ -1,3 +1,5 @@
+import Alert from "./alerts.js";
+
 const loginForm = document.querySelector('#login-form');
 const alertLogin = document.querySelector('#login-alert')
 const inputUser = document.querySelector('#user');
@@ -40,17 +42,8 @@ function validateLogin(data) {
     if ( code === 200 &&  status === 'success' && message === "Sesión iniciada") {
         window.location.replace("index.php");
     } else {
-
-        alertLogin.innerHTML = `
-            <button type="button" id="close-alert" class="btn-close float-end"></button>
-            <strong>¡Error!</strong> ${message} 
-        `;
-        alertLogin.onclick = function(e) {
-            if (e.target.id == 'close-alert') {
-                alertLogin.hidden = true;
-            }   
-        }
-        alertLogin.hidden = false;
+        const alert = new Alert(message, 'danger', loginForm);
+        alert.showAlert();
     }
 
 }

@@ -14,8 +14,7 @@
 </head>
 
 <body>
-
-    <?php include_once 'header.php'; ?> 
+    <?php include_once 'header.php'; ?>
 
     <div class="d-flex flex-wrap all">
 

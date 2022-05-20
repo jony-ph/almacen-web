@@ -14,7 +14,7 @@
             $this->host = 'localhost';
             $this->db = 'store';
             $this->user = 'root';
-            $this->password = '12345678';
+            $this->password = '';
             $this->charset = 'utf8mb4';
         }
 
