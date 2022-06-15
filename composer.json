@@ -1,0 +1,13 @@
+{
+    "name": "jony-ph/almacen-web",
+    "description": "Almacén web simple para registrar tus productos.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Perez Hernandez",
+            "email": "jonathan_perez_hdz@hotmail.com"
+        }
+    ],
+    "require": {}
+}
