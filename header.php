@@ -12,7 +12,9 @@
 <header>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
         <div class="container-fluid">
-			<a class="navbar-brand" href="index.php">Logo</a>
+			<a class="navbar-brand" href="index.php">
+				<img src="src/assets/images/logo-jungla-x.png" alt="Jungla logo" id="logo-img">
+			</a>
 
 			<?php if( isset($_SESSION['username']) ||  isset($_SESSION['email'])){ ?>
 
