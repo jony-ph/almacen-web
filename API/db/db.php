@@ -14,7 +14,7 @@
             $this->host = 'localhost';
             $this->db = 'u212992802_stock';
             $this->user = 'u212992802_jony_ph';
-            $this->password = 'vW7KvHJ>VZL';
+            $this->password = 'vW7KvHJ>VZl';
             $this->charset = 'utf8mb4';
         }
 
