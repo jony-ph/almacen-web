@@ -38,10 +38,10 @@
 
             <form action="" method="POST" id="change-password">
                 <div class="mb-4 mt-5">
-                    <input type="password" class="form-control" id="f-new-password" placeholder="Nueva contraseña" name="new-password">
+                    <input type="password" class="form-control" id="f-new-password" placeholder="Nueva contraseña" name="f-new-password">
                 </div>
                 <div class="mb-4 mt-5">
-                    <input type="password" class="form-control" id="f-confirm-password" placeholder="Confirmar contraseña" name="confirm-password">
+                    <input type="password" class="form-control" id="f-confirm-password" placeholder="Confirmar contraseña" name="f-confirm-password">
                 </div>
                 <input type="hidden" id="email" name="email" value="<?php echo $email ?>">
                 <input type="submit" class="btn btn-primary form-control mb-3" value="Guardar cambios">

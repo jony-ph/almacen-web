@@ -3,7 +3,7 @@
 $to  = $email;
 
 // Título
-$title = 'Restablecer contraseña';
+$title = 'Restablecer contrase&#241;a';
 
 // Código
 $code = rand(10000, 99999);
@@ -12,13 +12,13 @@ $code = rand(10000, 99999);
 $message = '
 <html>
 <head>
-  <title>Restablecer contraseña</title>
+  <title>Restablecer contrase&#241;a</title>
 </head>
 <body>
   <h1>Jungla almac&#233;n</h1>
 
   <div style="text-align:center;">
-    <p>Ingrese el siguiente c&#243;digo para confirmar que usted es qui&#233;n desea cambiar su contraseña. </p>
+    <p>Ingrese el siguiente c&#243;digo para confirmar que usted es qui&#233;n desea cambiar su contrase&#241;a. </p>
     <p>C&#243;digo de confirmaci&#243;n:</p>
     <h3>'.$code.'</h3>
 
@@ -38,7 +38,7 @@ $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 // headers adicionales
 // $headers .= 'To: <'.$to.'>' . "\r\n";
-// $headers .= 'From: Restablecer contraseña <soporte@junglalmacen.com>' . "\r\n";
+// $headers .= 'From: Restablecer contrase&#241;a <soporte@junglalmacen.com>' . "\r\n";
 // $headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
 // $headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
 
