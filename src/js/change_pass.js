@@ -4,7 +4,7 @@ const changePassForm = document.querySelector('#change-password');
 
 eventListener();
 function eventListener() {
-    resetFchangePassFormorm.addEventListener('submit', changePass);
+    changePassForm.addEventListener('submit', changePass);
 }
 
 function changePass(e) {
