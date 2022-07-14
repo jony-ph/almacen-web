@@ -41,6 +41,8 @@
 
             </form>
 
+            <a href="forget.php" class="btn btn-link form-control mb-3">¿Olvidaste tu contrase&ntilde;a?</a>
+
             <div class="alert alert-danger fade show" id ="login-alert" hidden>
             </div>
         </div>

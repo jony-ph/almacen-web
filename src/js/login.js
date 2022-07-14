@@ -1,7 +1,7 @@
 import Alert from "./alerts.js";
 
 const loginForm = document.querySelector('#login-form');
-const alertLogin = document.querySelector('#login-alert')
+const alertLogin = document.querySelector('#login-alert');
 const inputUser = document.querySelector('#user');
 
 eventListener();

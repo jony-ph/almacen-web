@@ -107,6 +107,34 @@ class SessionsAPI extends Message{
         
     }
 
+    function createResetData($resetPassData) {
+        $session = new Session();
+        $session->addResetData($resetPassData);
+    }
+
+    function verifyDataReset($verifyData) {
+        $session = new Session();
+        $response = $session->getToken($verifyData);
+
+        if( $response->rowCount() < 1 ){
+            $this->error(401, "Los datos no coinciden");
+            die();
+        }
+
+        $this->success(200, "Verificación válida");
+    }
+
+    function resetPassword($userData) {
+        
+        $session = new Session();
+
+        $userData['new_password'] = password_hash($userData['new_password'], PASSWORD_DEFAULT);
+        $session->setPassword($userData);
+
+        $this->success(201, "Contraseña actualizada");
+
+    }
+
     function imageValidation($image, $image_name){
 
         $images_folder= "src/assets/images/users/";

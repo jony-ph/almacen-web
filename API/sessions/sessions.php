@@ -64,12 +64,35 @@
         }
 
         function setPassword($userData){
-            $sql = "UPDATE users SET password= :new_password WHERE user_code= :user_code;";
+            $sql = "UPDATE users SET password= :new_password WHERE user_code= :user_code OR email= :email";
             $query = $query = $this->connect()->prepare($sql);
             $query-> execute([
                 'new_password' => $userData['new_password'],
-                'user_code' => $userData['user_code']
+                'user_code' => $userData['user_code'],
+                'email' => $userData['email']
             ]);
+        }
+
+        function addResetData($resetPassData) {
+            $sql = "INSERT INTO reset_passwords(email, token, code) VALUES (:email, :token, :code);";
+            $query = $this->connect() -> prepare($sql);
+            $query -> execute([ 
+                'email' => $resetPassData['email'],
+                'token' => $resetPassData['token'],
+                'code' => $resetPassData['code'],
+            ]);
+        }
+
+        function getToken($verifyData) {
+            $sql = "SELECT * FROM reset_passwords WHERE email= :email AND token= :token AND code= :code";
+            $query = $query = $this->connect()->prepare($sql);
+            $query-> execute([
+                'email' => $verifyData['email'],
+                'token' => $verifyData['token'],
+                'code' => $verifyData['code'],
+            ]);
+
+            return $query;
         }
 
     }
