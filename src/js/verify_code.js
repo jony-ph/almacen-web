@@ -2,6 +2,7 @@ import Alert from "./alerts.js";
 
 const codeForm = document.querySelector('#verify-code');
 const email = document.querySelector('#email').value;
+const token = document.querySelector('#token').value;
 
 eventListener();
 function eventListener() {
@@ -35,7 +36,7 @@ function redirectChangePass(data) {
     const { status, code, message } = data;
 
     if ( code === 200 &&  status === 'success' && message === "Verificación válida") {
-        window.location.replace("reset_password.php?email=" + email);
+        window.location.replace("reset_password.php?email=" + email + "&token=" + token);
     } else {
         const alert = new Alert("Acceso denegado", 'danger', loginForm);
         alert.showAlert();

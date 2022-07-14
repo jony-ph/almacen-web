@@ -6,8 +6,9 @@
         header('Location: index.php');
     }
 
-    if( isset($_GET['email']) ) {
+    if( isset($_GET['email'], $_GET['token']) ) {
         $email = $_GET['email'];
+        $token = $_GET['token'];
     } else {
         header("Location: login.php");
     }
@@ -44,6 +45,8 @@
                     <input type="password" class="form-control" id="f-confirm-password" placeholder="Confirmar contraseña" name="f-confirm-password">
                 </div>
                 <input type="hidden" id="email" name="email" value="<?php echo $email ?>">
+                <input type="hidden" id="token" name="token" value="<?php echo $token ?>">
+                
                 <input type="submit" class="btn btn-primary form-control mb-3" value="Guardar cambios">
             </form>
 
