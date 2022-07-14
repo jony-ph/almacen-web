@@ -33,9 +33,9 @@ function redirectIndex(data) {
     
     const { status, code, message } = data;
 
-    if ( code === 201 &&  status === 'success' && message === "Verificación válida" ) {
+    if ( code === 201 &&  status === 'success' && message === "Contraseña actualizada" ) {
         window.location.replace("index.php");
-    } else if ( code === 201 &&  status === 'success' && message === "Las contraseñas no coinciden" ){
+    } else if ( code === 300 &&  status === 'success' && message === "Las contraseñas no coinciden" ){
         const alert = new Alert(message, 'danger', loginForm);
         alert.showAlert();
     } else {
