@@ -380,15 +380,15 @@ function updateTable() {
     clearTableProducts();
 
     record_list.forEach( record => {
-        const {product_code, name, description,  amount, category, category_code} = record;
+        const {product_code, name, description,  amount, category, category_code, qr} = record;
         const row = document.createElement('tr');
 
         row.innerHTML = `
-            <td>${product_code}</td>
+            <td><a href="view.php?id=${product_code}">${product_code}</a></td>
             <td>${name}</td>
-            <td>${description}</td>
             <td>${category}</td>
             <td>${amount}</td>
+            <td> <img src="${qr}"/> </td>
         `;
 
         const td = document.createElement('td');

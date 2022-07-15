@@ -36,15 +36,16 @@
 
 
         function add($product){
-            $sql = "INSERT INTO stock(product_code, name, description, category, amount)
-                    VALUES (:product_code, :name, :description, :category, :amount)";
+            $sql = "INSERT INTO stock(product_code, name, description, category, amount, qr)
+                    VALUES (:product_code, :name, :description, :category, :amount, :qr)";
             $query = $this->connect() -> prepare($sql);
             $query -> execute([ 
                 'product_code' => $product['product_code'],
                 'name' => $product['name'],
                 'description' => $product['description'], 
                 'category' => $product['category'], 
-                'amount' => $product['amount']
+                'amount' => $product['amount'],
+                'qr' => $product['qr']
             ]);
 
             return $query; 
@@ -91,6 +92,18 @@
             ]);
             
             return $query; 
+        }
+
+        function getOneProduct($productCode) {
+            $sql = "SELECT * FROM stock 
+                    INNER JOIN categories ON stock.category = categories.category_code 
+                    WHERE product_code= :code";
+            $query = $this->connect() -> prepare($sql);
+            $query -> execute([
+                'code' => $productCode['code']
+            ]);
+
+            return $query;
         }
 
     }

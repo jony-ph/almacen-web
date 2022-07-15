@@ -25,6 +25,7 @@ class API extends Message{
                 'category' => $row['category'],
                 'category_code' => $row['category_code'],
                 'amount' => $row['amount'],
+                'qr' => $row['qr']
             );
 
             array_push($productos, $object);
@@ -127,6 +128,33 @@ class API extends Message{
         $stmt->update($product);
 
         $this->success(200, "Producto editado") ;
+    }
+
+    function getOneProduct($productCode){
+        $stmt = new Product();
+        $result = $stmt->getOneProduct($productCode);
+        
+        if( $result->rowCount() < 1 ) {
+            $this->warning(204, "No hay registros");
+            die();
+        }
+
+        $product = array();
+        while(  $row = $result->fetch(PDO::FETCH_ASSOC) ){
+
+            $object = array(
+                'product_code' => $row['product_code'],
+                'name' => $row['name'],
+                'description' => $row['description'],
+                'category' => $row['category'],
+                'amount' => $row['amount']
+            );
+
+            array_push($product, $object);
+        }
+
+        $this->printJSON($product);
+
     }
     
 }

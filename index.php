@@ -99,9 +99,9 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
-                        <th>Descripcion</th>
                         <th>Categoría</th>
                         <th>Cantidad</th>
+                        <th>QR</th>
                     </tr>
                 </thead>
                 <tbody>
