@@ -18,7 +18,7 @@
     }
   
     $filename = $dir . 'junglalmacen'.$name . $product_code.'.png';
-    $size = 10;
+    $size = 5;
     $level = 'H';
     $frameSize = 1;
     $content = 'https://junglalmacen.com/view.php?id=' . $product_code;
