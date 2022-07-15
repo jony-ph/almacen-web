@@ -42,7 +42,10 @@
                 </table>
             </div>
 
-            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#add-privilege-modal">Nuevo privilegio</button>
+            <!-- <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#add-privilege-modal">Nuevo privilegio</button> -->
+
+            <h3 class="my-4">Privacidad</h3>
+            <a href="privacy_policy.php" class="m-5">Política de privacidad</a>
 
         </div>
         <!-- The Modal Password -->

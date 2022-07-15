@@ -23,7 +23,7 @@
 
     <?php include_once 'header.php'; ?>
 
-    <main class="main d-flex align-items-center">
+    <main class="main d-flex row align-items-center mt-5">
         <div class="d-flex row justify-content-center border p-5 mx-auto shadow-sm col-md-5" style="border-radius:10px;">
             
             <div class="mx-auto text-center">
@@ -46,6 +46,7 @@
             <div class="alert alert-danger fade show" id ="login-alert" hidden>
             </div>
         </div>
+        <a href="privacy_policy.php" id="privacy" class="text-end pe-5 pt-5">Política de privacidad</a>
     </main>
 
     <script src="src/js/login.js" type="module"></script>
