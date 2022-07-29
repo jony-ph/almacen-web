@@ -6,7 +6,7 @@
 
     $code = $_GET['id'];
 
-    if ( isset($code) ){
+    if ( !isset($code) ){
         $api->error(400, "Error al llamar a la API");
         die();
     } 
