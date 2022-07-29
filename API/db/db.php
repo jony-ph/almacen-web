@@ -12,9 +12,9 @@
         // Constructor
         public function __construct(){
             $this->host = 'localhost';
-            $this->db = 'store';
-            $this->user = 'root';
-            $this->password = '';
+            $this->db = 'u212992802_stock';
+            $this->user = 'u212992802_jony_ph';
+            $this->password = 'vW7KvHJ>VZl';
             $this->charset = 'utf8mb4';
         }
 
