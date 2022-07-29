@@ -1,3 +1,5 @@
+import Alert from "./alerts.js";
+
 const resetForm = document.querySelector("#reset-pass-form");
 const inputEmail = document.querySelector("#email-reset");
 
