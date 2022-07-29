@@ -109,7 +109,16 @@ class SessionsAPI extends Message{
 
     function createResetData($resetPassData) {
         $session = new Session();
+        $result = $session->checkUserExist($resetPassData);
+
+        if( $result->rowCount() < 1 ) {
+            $this->error(401, "Usuario incorrecto");
+            die();
+        } 
+
         $session->addResetData($resetPassData);
+        $this->success(200, "Correo enviado con éxito");
+
     }
 
     function verifyDataReset($verifyData) {

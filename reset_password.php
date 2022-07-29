@@ -36,12 +36,22 @@
             <div class="mx-auto text-center">
                 <img src="src/assets/images/logo-jungla.png" alt="Jungla logo">
             </div>
+            <div class="mt-4">
+                <p>La contraseña debe contener: </p>
+                <ul>
+                    <li>Más de 8 caracteres</li>
+                    <li>Al menos una letra mayúscula</li>
+                    <li>Al menos una letra minúscula</li>
+                    <li>Al menos un caracter especial</li>
+                    <li>Al menos un número</li>
+                </ul>
+            </div>
 
             <form action="" method="POST" id="change-password">
-                <div class="mb-4 mt-5">
+                <div class="mb-4 mt-3">
                     <input type="password" class="form-control" id="f-new-password" placeholder="Nueva contraseña" name="f-new-password">
                 </div>
-                <div class="mb-4 mt-5">
+                <div class="mb-4 mt-3">
                     <input type="password" class="form-control" id="f-confirm-password" placeholder="Confirmar contraseña" name="f-confirm-password">
                 </div>
                 <input type="hidden" id="email" name="email" value="<?php echo $email ?>">

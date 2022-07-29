@@ -44,7 +44,7 @@
         </div>
     </main>
 
-    <script src="src/js/reset.js"></script>
+    <script src="src/js/reset.js" type="module"></script>
 
 </body>
 </html>
