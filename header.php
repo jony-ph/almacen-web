@@ -42,6 +42,9 @@
 					</li>
 					<?php } ?>
 					<li class="nav-item">
+						<a class="nav-link" href="data.php">Datos</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href="settings.php">Configuración</a>
 					</li>
 				</ul>
