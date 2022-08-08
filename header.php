@@ -30,22 +30,22 @@
 			<div class="collapse navbar-collapse" id="mynavbar">
 				<ul class="navbar-nav me-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="index.php">Inicio</a>
+						<a class="nav-link" href="/almacen/" onclick="route()">Inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="history.php">Historial</a>
+						<a class="nav-link" href="/almacen/history" onclick="route()">Historial</a>
 					</li>
 
 					<?php if($_SESSION['privilege'] == 1){ ?>
 					<li class="nav-item">
-						<a class="nav-link" href="users.php">Usuarios</a>
+						<a class="nav-link" href="users" onclick="route()">Usuarios</a>
 					</li>
 					<?php } ?>
 					<li class="nav-item">
-						<a class="nav-link" href="data.php">Datos</a>
+						<a class="nav-link" href="data" onclick="route()">Datos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="settings.php">Configuración</a>
+						<a class="nav-link" href="settings" onclick="route()">Configuración</a>
 					</li>
 				</ul>
 

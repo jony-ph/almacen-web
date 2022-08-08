@@ -1,19 +1,4 @@
-<?php include_once 'API/sessions/authorization.php'; ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historial</title>
-
-    <link rel="stylesheet" href="src/assets/styles/history.css">
-</head>
-<body>
-    <?php include_once 'header.php'; ?>
-
-    <main class="container" id="main">
+    <main class="page-container container" id="main">
 
         <h2 class="text-center my-5">Entradas</h2>
 
